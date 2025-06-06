@@ -7,7 +7,7 @@ import { User } from '@prisma/client';
 @Controller('users')
 export class UserController {
   @Get('me')
-  getMe(@GetUser() user: User) {
+  getMe(@GetUser('id') user: User) {
     return user;
   }
 }
